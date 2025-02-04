@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="row">
+    <h2><strong>Ejemplo two way data binding</strong></h2>
+    <input [(ngModel)]="InputData" type="text" class="form-control" placeholder="Escriba algo aqui">
+    <h3>{{InputData}}</h3>
+  </div>
+
+
+  <div class="row">
+    <h2><strong>Ejemplo Event binding</strong></h2>
+    <h3>{{ texto }}</h3>
+    <button (click)="cambiarTexto()" class="btn btn-primary">click</button>
+  </div>
+
+  <div class="row">
+    <h2><strong>Ejemplo interpolación</strong></h2>
+    <h3>Hola mi nombre es {{ nombre }}</h3>
+    <h3>La suma de 2 + 2 = {{ 2 + 2 }}</h3>
+    <h3>La suma de 2 + 3 = {{ getSuma(2, 3) }}</h3>
+  </div>
+
+  <div class="row">
+    <h2><strong>Ejemplo property binding</strong></h2>
+    <img [src]="imagenAngular" alt="Logo de angular">
+    <input type="text" class="form-control" [placeholder]="placetexto" />
+    <h3>Fecha</h3>
+    <input type="date" class="form-control" [disabled]="habilitado" />
+  </div>
+</div>
