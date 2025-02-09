@@ -13,9 +13,9 @@
     <tbody>
       <tr *ngFor="let estudiante of lista; let i = index"
       >
-        <td>{{i+1}}</td>
+        <td><span  [ngClass]="estudiante.Estado?'badge badge-success':'badge badge-danger'">{{i+1}}</span></td>
         <td>{{estudiante.Nombre}}</td>
-        <td>{{estudiante.Estado}}</td>
+        <td [ngStyle]="{'color': estudiante.Estado? 'green':'red' }">{{estudiante.Estado}}</td>
       </tr>
     </tbody>
 </table>
